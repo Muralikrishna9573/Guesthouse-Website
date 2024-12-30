@@ -3,6 +3,8 @@ import Navbar from '../Components/Navbar'
 import About from '../Components/About'
 import About1 from '../Components/About1'
 import Gallery from '../Components/Gallery'
+import Service from '../Components/Service'
+
 
 const Landingpage = () => {
   return (
@@ -11,6 +13,7 @@ const Landingpage = () => {
       <About/>
       <About1/>
       <Gallery/>
+      <Service/>
     </div>
   )
 }
