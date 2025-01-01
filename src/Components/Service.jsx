@@ -4,7 +4,7 @@ const Service = () => {
   return (
     <div className="bg-white-50">
       <section className="text-gray-600 body-font">
-        <div className="container px-16  py-16 mx-auto">
+        <div className="container px-4 md:px-8 lg:px-16 py-16 mx-auto">
           {/* Header Section */}
           <div className="flex flex-wrap w-full mb-16 flex-col items-center text-center">
             <p className="text-xl text-indigo-600 p-2 font-semibold uppercase">Our Services</p>
@@ -13,7 +13,7 @@ const Service = () => {
               Explore our wide range of services designed to elevate your business and exceed your expectations.
             </p>
           </div>
-          
+
           {/* Services Grid */}
           <div className="flex flex-wrap -m-4">
             {[
@@ -49,9 +49,10 @@ const Service = () => {
               },
             ].map((service, index) => (
               <div key={index} className="xl:w-1/3 md:w-1/2 p-4">
-                <div className="border border-gray-200 shadow-md p-6 rounded-lg bg-white">
+                <div className="border border-gray-200 shadow-md p-6 rounded-lg bg-white h-full flex flex-col">
                   <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                     <svg
+                      aria-label={service.title}
                       fill="none"
                       stroke="currentColor"
                       strokeLinecap="round"
@@ -69,9 +70,13 @@ const Service = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Call-to-Action Button */}
-          
+          <div className="flex justify-center mt-12">
+            <button className="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-6 rounded-lg text-lg font-medium">
+              Learn More
+            </button>
+          </div>
         </div>
       </section>
     </div>
